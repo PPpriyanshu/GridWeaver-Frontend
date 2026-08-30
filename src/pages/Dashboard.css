@@ -1,0 +1,164 @@
+/* Main Dashboard */
+
+.dashboard {
+    min-height: 100vh;
+    padding: 40px;
+    background: #080706;
+    color: #f4efe6;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.dashboard h1 {
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: #d4af37;
+}
+
+.dashboard h2 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    color: #f4efe6;
+    border-bottom: 1px solid #3a3325;
+    padding-bottom: 10px;
+}
+
+/* Summary */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    background: #12100d;
+    border: 1px solid #3a3325;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.summary-card h3 {
+    margin: 0 0 12px;
+    color: #b8b0a5;
+    font-size: 15px;
+}
+
+.summary-card p {
+    margin: 0;
+    color: #d4af37;
+    font-size: 30px;
+    font-weight: bold;
+}
+.alert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.alert-card {
+    border: 1px solid #5c4a20;
+    border-radius: 12px;
+    padding: 20px;
+    background: #11100d;
+}
+
+.alert-card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.alert-card p {
+    color: #ddd;
+    margin: 8px 0;
+}
+
+/* Devices */
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.device-card {
+    background: #12100d;
+    border: 1px solid #3a3325;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.device-card h3 {
+    color: #d4af37;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.device-card p {
+    color: #b8b0a5;
+    margin: 10px 0;
+}
+
+.device-status {
+    color: #d4af37 !important;
+    font-weight: bold;
+}
+
+/* Telemetry */
+
+.telemetry-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.telemetry-card {
+    background: #12100d;
+    border: 1px solid #3a3325;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.telemetry-card h3 {
+    color: #b8b0a5;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.telemetry-card p {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .telemetry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .summary-grid,
+    .device-grid,
+    .telemetry-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
